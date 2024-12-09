@@ -2,7 +2,7 @@
 
 **SharpBox** is a lightweight 2D graphics framework built on [SFML](https://www.sfml-dev.org/). It provides an intuitive interface for drawing points, shapes, lines, grids, and text, making it ideal for educational projects, prototypes, and graphical visualizations.
 
-![demo](assets/screenshot01.jpg)
+![demo](assets/screenshot001.jpg)
 
 
 ## Features
