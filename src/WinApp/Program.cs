@@ -19,7 +19,9 @@ for (int i = 0; i < 360; i += 1)
 }
 
 plane.AddRectangle(0, 0, 200, 200, Color.Magenta);
-plane.AddCircle(0,0,100, Color.Blue);
+plane.AddCircle(0, 0, 100, Color.Blue);
+
+plane.AddLine(new SharpBox.Core.Position(0, 0), new SharpBox.Core.Position(100, 100), Color.Red);   
 
 // Start the rendering loop
 plane.Run();
