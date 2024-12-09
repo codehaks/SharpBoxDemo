@@ -85,6 +85,22 @@ public class Plane
         }
     }
 
+    public void AddText(string content, Position position, uint fontSize, Color color, string fontPath)
+    {
+        // Load the font
+        Font font = new Font(fontPath);
+
+        // Create a Text object
+        Text text = new Text(content, font, fontSize)
+        {
+            FillColor = color,
+            Position = position.ToVector2f(Width, Height)
+        };
+
+        // Add the Text object to the drawables list
+        _drawables.Add(text);
+    }
+
 
     public void Run()
     {
