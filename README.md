@@ -10,7 +10,6 @@
 - **Text Rendering**: Display custom text with any TrueType font.
 - **Grid Overlay**: Visualize your space with minor and major grid lines.
 - **Simple API**: Minimal setup required to start rendering.
-- **WPF Integration**: Embed SFML rendering inside a WPF application.
 
 ## Getting Started
 
