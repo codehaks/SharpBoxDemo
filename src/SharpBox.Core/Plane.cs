@@ -68,6 +68,24 @@ public class Plane
         _primitives.Add((line, PrimitiveType.Lines));
     }
 
+    public void AddGrid(float spacing, float majorLineSpacing, Color minorLineColor, Color majorLineColor)
+    {
+        // Add vertical lines
+        for (float x = -Width / 2f; x <= Width / 2f; x += spacing)
+        {
+            var color = (MathF.Abs(x) % majorLineSpacing == 0) ? majorLineColor : minorLineColor;
+            AddLine(new Position(x, -Height / 2f), new Position(x, Height / 2f), color);
+        }
+
+        // Add horizontal lines
+        for (float y = -Height / 2f; y <= Height / 2f; y += spacing)
+        {
+            var color = (MathF.Abs(y) % majorLineSpacing == 0) ? majorLineColor : minorLineColor;
+            AddLine(new Position(-Width / 2f, y), new Position(Width / 2f, y), color);
+        }
+    }
+
+
     public void Run()
     {
         while (_window.IsOpen)
